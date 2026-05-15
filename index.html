@@ -24,11 +24,25 @@
       padding: 20px;
     }
 
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #9be9a8, #00ff78);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 0 25px rgba(155,233,168,0.4);
+    }
+
     h1 {
       letter-spacing: 6px;
       font-size: 2.5rem;
       color: #9be9a8;
       text-shadow: 0 0 15px rgba(155,233,168,0.4);
+      margin-top: 0;
     }
 
     .subtitle {
@@ -52,6 +66,7 @@
       color: #9be9a8;
       outline: none;
       margin-bottom: 10px;
+      box-sizing: border-box;
     }
 
     button {
@@ -61,6 +76,7 @@
       border: 1px solid #2a2a2a;
       color: #9be9a8;
       cursor: pointer;
+      box-sizing: border-box;
     }
 
     button:hover {
@@ -98,8 +114,8 @@
 
 <body>
   <div class="container">
+    <div class="logo">🧠</div>
     <h1 class="glitch">MNEMOSYNE INITIATIVE</h1>
-    <div class="subtitle">ACCESS PROTOCOL // LEVEL 0</div>
 
     <div class="terminal">
       <input id="mail" type="text" placeholder="enter contact signal..." />
