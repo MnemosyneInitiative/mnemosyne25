@@ -99,19 +99,24 @@
         return;
       }
 
-      log.innerText = ">> verifying node...";
+      log.innerText = ".";
       
       setTimeout(() => {
-        log.innerText = ">> connection unstable";
+        log.innerText = "..";
       }, 1200);
+      
+      setTimeout(() => {
+        log.innerText = "...";
+      }, 2400);
+
 
       setTimeout(() => {
         log.innerText = ">> " + mail + " registered in Mnemosyne archive";
-      }, 2500);
+      }, 3600);
 
       setTimeout(() => {
-        log.innerText += "\n>> awaiting next instruction...";
-      }, 3800);
+        log.innerText += "\n>> vhqg ph d gp rq wlndrn";
+      }, 4800);
     }
   </script>
 </body>
