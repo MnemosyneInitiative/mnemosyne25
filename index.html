@@ -8,7 +8,7 @@
   <style>
     body {
       margin: 0;
-      background: radial-gradient(circle at center, #05060a, #000000);
+      background: #000000;
       color: #c9d1d9;
       font-family: "Courier New", monospace;
       overflow: hidden;
@@ -96,19 +96,6 @@
       color: #ffd700;
     }
 
-    .glitch {
-      animation: glitch 1.2s infinite;
-    }
-
-    @keyframes glitch {
-      0% { opacity: 1; }
-      20% { opacity: 0.7; }
-      40% { opacity: 1; }
-      60% { opacity: 0.4; }
-      80% { opacity: 1; }
-      100% { opacity: 0.9; }
-    }
-
     .footer {
       position: absolute;
       bottom: 10px;
@@ -145,7 +132,7 @@
       <img id="logoImg" style="display: none;" />
     </div>
 
-    <h1 class="glitch">MNEMOSYNE INITIATIVE</h1>
+    <h1>MNEMOSYNE INITIATIVE</h1>
 
     <div class="terminal">
       <input id="mail" type="text" placeholder="enter contact signal..." />
