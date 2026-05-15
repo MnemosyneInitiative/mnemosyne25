@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mnemosyne Initiative</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #05060a, #000000);
+      color: #c9d1d9;
+      font-family: "Courier New", monospace;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      letter-spacing: 6px;
+      font-size: 2.5rem;
+      color: #9be9a8;
+      text-shadow: 0 0 15px rgba(155,233,168,0.4);
+    }
+
+    .subtitle {
+      opacity: 0.7;
+      margin-bottom: 30px;
+    }
+
+    .terminal {
+      border: 1px solid #2a2a2a;
+      padding: 20px;
+      width: 320px;
+      background: rgba(0,0,0,0.6);
+      box-shadow: 0 0 25px rgba(0,255,120,0.08);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      background: black;
+      border: 1px solid #333;
+      color: #9be9a8;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      color: #9be9a8;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #111;
+    }
+
+    .log {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      min-height: 40px;
+    }
+
+    .glitch {
+      animation: glitch 1.2s infinite;
+    }
+
+    @keyframes glitch {
+      0% { opacity: 1; }
+      20% { opacity: 0.7; }
+      40% { opacity: 1; }
+      60% { opacity: 0.4; }
+      80% { opacity: 1; }
+      100% { opacity: 0.9; }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.7rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="glitch">MNEMOSYNE INITIATIVE</h1>
+    <div class="subtitle">ACCESS PROTOCOL // LEVEL 0</div>
+
+    <div class="terminal">
+      <input id="mail" type="text" placeholder="enter contact signal..." />
+      <button onclick="fakeSend()">TRANSMIT</button>
+      <div class="log" id="log"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    // "Memory is not storage. It is control."
+  </div>
+
+  <script>
+    function fakeSend() {
+      const mail = document.getElementById("mail").value;
+      const log = document.getElementById("log");
+
+      if (!mail) {
+        log.innerText = ">> signal absent";
+        return;
+      }
+
+      log.innerText = ">> verifying node...";
+      
+      setTimeout(() => {
+        log.innerText = ">> connection unstable";
+      }, 1200);
+
+      setTimeout(() => {
+        log.innerText = ">> " + mail + " registered in Mnemosyne archive";
+      }, 2500);
+
+      setTimeout(() => {
+        log.innerText += "\n>> awaiting next instruction...";
+      }, 3800);
+    }
+  </script>
+</body>
+</html>
